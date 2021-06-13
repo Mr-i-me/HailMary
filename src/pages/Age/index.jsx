@@ -1,7 +1,10 @@
 import React from "react";
+import { useHistory } from 'react-router-dom';
+
 import "./style.scss";
 
 const Age = props => {
+  const history = useHistory();
 
   return (
     <div className="AgeContainer">
@@ -18,7 +21,7 @@ const Age = props => {
             </p>
 
             <div className="AgeButtons">
-              <button>+21</button>
+              <button onClick={() => history.push('/home')}>+21</button>
               <button>-21</button>
             </div>
           </section>
