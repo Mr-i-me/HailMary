@@ -5,6 +5,8 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import Age from "./pages/Age/Age";
+
 
 function App() {
   return (
@@ -27,14 +29,15 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Age />
+            {/*<Home />*/}
           </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
+          {/*<Route path="/about">*/}
+          {/*  <About />*/}
+          {/*</Route>*/}
+          {/*<Route path="/dashboard">*/}
+          {/*  <Dashboard />*/}
+          {/*</Route>*/}
         </Switch>
       </div>
       {/*</div>*/}
@@ -44,29 +47,3 @@ function App() {
 
 export default App;
 
-// You can think of these components as "pages"
-// in your app.
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
-}
