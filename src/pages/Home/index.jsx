@@ -15,7 +15,6 @@ const Home = props => (
         <section className="Home">
             <div>
                 <Example/>
-                {/*<img src={imge} alt="" />*/}
             </div>
         </section>
     </>
