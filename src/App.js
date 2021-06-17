@@ -1,46 +1,15 @@
-import "./App.css";
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
+  BrowserRouter as Router,
 } from "react-router-dom";
-import Age from "./pages/Age/Age";
 
+import "./App.css";
+
+import Routes from './Routes'
 
 function App() {
   return (
     <Router>
-      {/*<div className="App">*/}
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
-
-        <hr />
-
-        <Switch>
-          <Route exact path="/">
-            <Age />
-            {/*<Home />*/}
-          </Route>
-          {/*<Route path="/about">*/}
-          {/*  <About />*/}
-          {/*</Route>*/}
-          {/*<Route path="/dashboard">*/}
-          {/*  <Dashboard />*/}
-          {/*</Route>*/}
-        </Switch>
-      </div>
-      {/*</div>*/}
+      <Routes />  
     </Router>
   );
 }
