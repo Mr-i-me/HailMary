@@ -1,35 +1,38 @@
 import React from 'react';
-import { Container, Nav, NavbarBrand } from 'reactstrap';
-import NavLinks from './NavLinks';
+import { Container, Nav } from 'reactstrap';
+import Logo from '../../assets/img/logo.svg';
 
 const Navigation = (props) => (
-  <Nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <Container fluid className=" px-4 px-lg-5">
-      <NavbarBrand className="navbar-brand" href="#">
-        Hail Mary
-        {/*<img src="http://placehold.it/150x50?text=Logo" alt="" />*/}
-      </NavbarBrand>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon" />
-      </button>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <NavLinks />
-        <form className="d-flex">
-          <button className="btn btn-outline-dark" type="submit">
-            <i className="bi-cart-fill me-1" />
-            Cart
-            <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
-          </button>
-        </form>
-      </div>
+  <Nav className="main-nav-outer" id="test">
+    <Container fluid>
+      <ul className="main-nav">
+        <li>
+          <a href="#header">Home</a>
+        </li>
+        <li>
+          <a href="#service">Servicos</a>
+        </li>
+        <li>
+          <a href="#Portfolio">Parceiros</a>
+        </li>
+        <li className="small-logo">
+          {/*<a href="#header">*/}
+            <img src={Logo} className="logo" alt="" />
+          {/*</a>*/}
+        </li>
+        <li>
+          <a href="#client">Clients</a>
+        </li>
+        <li>
+          <a href="#team">Team</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <a className="res-nav_click" href="#">
+        <i className="fa fa-bars" />
+      </a>
     </Container>
   </Nav>
 );

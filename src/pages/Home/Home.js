@@ -1,8 +1,9 @@
 import React from 'react';
 import {Container, Row} from 'reactstrap';
-import Navigation from 'components/Navigation';
 import './styles.scss';
 import Slider from "./Carousel/Slider";
+import Navigation from "../../components/Navigation";
+import Contact from "../../components/Contact";
 
 const Home = (props) => (
     <>
@@ -18,6 +19,9 @@ const Home = (props) => (
                 </Row>
                 <Row>
                     <p>lorem ipsum</p>
+                </Row>
+                <Row>
+                    <Contact/>
                 </Row>
             </Container>
         </section>
